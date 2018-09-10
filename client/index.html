@@ -20,12 +20,12 @@
 
         <div class="form-group">
             <label for="data">Data</label>
-            <input type="text" id="data" class="form-control" required autofocus/>
+            <input type="text" id="data" class="form-control" required autofocus />
         </div>
 
         <div class="form-group">
             <label for="quantidade">Quantidade</label>
-            <input type="number" min="1" step="1" id="quantidade" class="form-control" value="1" required/>
+            <input type="number" min="1" step="1" id="quantidade" class="form-control" value="1" required />
         </div>
 
         <div class="form-group">
@@ -46,16 +46,11 @@
     </div>
     <br>
     <br>
-    
-    <div id="negociacoes"></div> 
-    
+
+    <div id="negociacoes"></div>
+
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.js"></script>
-    <script>
-        System
-            .import('app/app.js')
-            .catch(err => console.error(err));
-    </script>
+    <script src="dist/bundles.js"></script>
 
 </body>
 
