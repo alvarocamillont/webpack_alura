@@ -11,6 +11,11 @@ plugins.push(
 );
 
 plugins.push(
+    new webpack.optimize.CommonsChunkPlugin({ 
+
+}));
+
+plugins.push(
     new webpack.ProvidePlugin({
            $: 'jquery/dist/jquery.js',
            jQuery: 'jquery/dist/jquery.js'
@@ -19,6 +24,7 @@ plugins.push(
 
 if (process.env.NODE_ENV == 'production') {
 
+    plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
     plugins.push(new babiliPlugin());
 
     plugins.push(new optimizeCSSAssetsPlugin({
